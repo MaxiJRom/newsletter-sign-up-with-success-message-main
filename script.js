@@ -23,7 +23,7 @@ d.addEventListener("submit", (e) => {
 		$inputEmail.classList.remove("email-error");
 		$errorText.style.display = "none";
 
-		location.pathname = "/success.html";
+		location.pathname = "/newsletter-sign-up-with-success-message-main/success.html";
 	}
 });
 
