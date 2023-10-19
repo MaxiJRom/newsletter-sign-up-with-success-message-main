@@ -1,0 +1,224 @@
+@font-face {
+	font-family: Roboto-Regular;
+	src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+@font-face {
+	font-family: Roboto-Bold;
+	src: url("./assets/fonts/Roboto-Bold.ttf");
+}
+
+:root {
+	--clr-dark-grey: hsl(234, 29%, 20%);
+	--clr-charcoal: hsl(235, 18%, 26%);
+	--clr-grey: hsl(231, 7%, 60%);
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-tomato: hsl(4, 100%, 67%);
+	--clr-tomato-light: hsl(4, 100%, 95%);
+}
+
+* {
+	font-family: Roboto-Regular;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: var(--clr-charcoal);
+}
+
+main {
+	flex: 1;
+	display: grid;
+}
+
+section {
+	display: grid;
+	grid-template-rows: 200px 1fr;
+	justify-content: center;
+	width: clamp(360px, 100vw, 800px);
+	background-color: var(--clr-white);
+}
+
+.success {
+	width: 100vw;
+
+	background-color: var(--clr-white);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	gap: 1rem;
+
+	padding: 5rem 1rem 3rem;
+}
+
+.success img {
+	height: 3rem;
+}
+
+.success p {
+	line-height: 1.5;
+	flex: 1;
+}
+
+.success a {
+	background-color: var(--clr-dark-grey);
+	color: var(--clr-white);
+	font-family: Roboto-Bold;
+	cursor: pointer;
+	border: 0;
+	text-decoration: none;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	width: 100%;
+	text-align: center;
+}
+
+.success a:active,
+.success a:focus {
+	background-color: var(--clr-tomato);
+	color: var(--clr-white);
+}
+/*====================================== left  ===================================== */
+section div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 1rem;
+}
+
+section h1,
+.success h1 {
+	font-size: 2.5rem;
+	font-family: Roboto-Bold;
+	color: var(--clr-dark-grey);
+}
+section div p,
+li,
+.success p {
+	font-size: 0.9rem;
+	color: var(--clr-dark-grey);
+}
+
+section ul {
+	list-style: none;
+	display: table;
+}
+
+section ul li {
+	margin-block: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.item-text {
+	flex: 1;
+}
+
+form label {
+	color: var(--clr-dark-grey);
+	display: flex;
+	justify-content: space-between;
+}
+
+form label p {
+	font-family: Roboto-bold;
+	font-size: 0.7rem;
+}
+
+.error-text {
+	color: var(--clr-tomato);
+	display: none;
+}
+
+form input {
+	width: 100%;
+	padding: 1rem;
+	border-radius: 0.5rem;
+}
+
+.email {
+	border: 1px solid var(--clr-grey);
+	margin-block: 0.5rem 1.1rem;
+	font-family: Roboto-Bold;
+}
+
+.email:focus {
+	border: 1px solid #000;
+	outline: 0;
+}
+
+.email-error {
+	color: var(--clr-tomato);
+	border-color: var(--clr-tomato);
+	background-color: var(--clr-tomato-light);
+}
+
+.button {
+	background-color: var(--clr-dark-grey);
+	color: var(--clr-white);
+	font-family: Roboto-Bold;
+	cursor: pointer;
+	border: 0;
+}
+
+.button:active,
+.button:focus {
+	background-color: var(--clr-tomato);
+	color: var(--clr-white);
+}
+/*====================================== right  ===================================== */
+
+picture {
+	text-align: center;
+}
+
+picture img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+/*====================================== media querie  ===================================== */
+@media screen and (min-width: 600px) {
+	main {
+		place-content: center;
+	}
+
+	section {
+		padding: 2rem clamp(1rem, 3vw, 2rem);
+		grid-template-rows: 450px;
+		grid-template-columns: 50% 50%;
+		border-radius: 1rem;
+	}
+
+	picture {
+		order: 1;
+		text-align: right;
+	}
+
+	.success {
+		width: clamp(360px, 100vw, 430px);
+		height: 450px;
+		padding: 3rem;
+		border-radius: 2rem;
+	}
+}
+
+/*====================================== footer  ===================================== */
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
