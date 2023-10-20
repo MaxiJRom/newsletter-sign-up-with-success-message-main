@@ -172,6 +172,7 @@ form input {
 }
 
 .button:active,
+.button:hover,
 .button:focus {
 	background-color: var(--clr-tomato);
 	color: var(--clr-white);
