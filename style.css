@@ -81,6 +81,7 @@ section {
 }
 
 .success a:active,
+.success a:hover,
 .success a:focus {
 	background-color: var(--clr-tomato);
 	color: var(--clr-white);
